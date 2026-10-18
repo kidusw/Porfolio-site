@@ -84,7 +84,18 @@ const PROJECTS = [
   },
 ];
 
-type Cluster = { name: string; x: number; y: number; items: string[]; hot?: boolean };
+const CERTS = [
+  { id: "8SHA9OJZYRWW", title: "Supervised Machine Learning: Regression and Classification" },
+  { id: "QVMYGLQEEV4B", title: "Neural Networks and Deep Learning" },
+  {
+    id: "H3HE6LQT6J9G",
+    title: "Improving Deep Neural Networks",
+    sub: "Hyperparameter tuning, regularization and optimization",
+  },
+  { id: "EPPU7L9VAA59", title: "Convolutional Neural Networks" },
+];
+
+type Cluster ={ name: string; x: number; y: number; items: string[]; hot?: boolean };
 
 const CLUSTERS: Cluster[] = [
   {
@@ -525,7 +536,7 @@ export default function App() {
                 ["3.77", "GPA · B.Sc. CS"],
                 ["RAG", "in production"],
                 ["Agents", "LangGraph"],
-                ["2", "ML certifications"],
+                ["4", "DeepLearning.AI certs"],
               ].map(([k, v]) => (
                 <div key={v} className="bg-ink p-5">
                   <div className="font-serif text-4xl text-paper">{k}</div>
@@ -709,12 +720,26 @@ export default function App() {
               </div>
             </div>
             <div className="bg-ink p-6 md:col-span-2 md:p-8">
-              <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-dim">certifications</div>
+              <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-dim">certifications · deeplearning.ai on coursera</div>
               <ul className="mt-4 divide-y divide-line">
-                {["Supervised Machine Learning and Regression", "Neural Networks and Deep Learning"].map((c) => (
-                  <li key={c} className="flex items-baseline justify-between gap-4 py-4">
-                    <span className="font-serif text-2xl leading-tight md:text-3xl">{c}</span>
-                    <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.16em] text-sage">ML</span>
+                {CERTS.map((c) => (
+                  <li key={c.id}>
+                    <a
+                      href={`https://www.coursera.org/account/accomplishments/verify/${c.id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-baseline justify-between gap-4 py-4"
+                    >
+                      <span>
+                        <span className="block font-serif text-2xl leading-tight transition-colors group-hover:text-signal md:text-3xl">
+                          {c.title}
+                        </span>
+                        {c.sub && <span className="mt-1 block text-sm text-muted">{c.sub}</span>}
+                      </span>
+                      <span className="flex shrink-0 items-center gap-1 font-mono text-[10px] uppercase tracking-[0.16em] text-sage">
+                        verify <ArrowUpRight size={12} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                      </span>
+                    </a>
                   </li>
                 ))}
               </ul>
