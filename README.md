@@ -17,9 +17,10 @@ I'm a software engineer from Addis Ababa who builds AI-powered backends: retriev
 
 | Project | What it is | Stack |
 | --- | --- | --- |
+| [Transaction Categorization & Insights](https://github.com/kidusw/transaction-categorization) | Categorizes English and Amharic/English bank transactions (0.991 macro-F1) and surfaces recurring payments, spend and anomalies | scikit-learn, LightGBM, MLflow, FastAPI, PostgreSQL, Streamlit |
+| [Credit Risk & Loan Default](https://github.com/kidusw/credit-risk) | Default-probability models on Lending Club loans, with expected loss, reason codes and a fairness audit | LightGBM, SHAP, MLflow, FastAPI, PostgreSQL, Docker |
 | [PDF RAG Chat](https://github.com/kidusw/pdf-rag-persistent-memory) | Multi-document Q&A over PDFs with persistent chat memory | FastAPI, LangChain, ChromaDB, MongoDB, OpenAI |
 | [Machine & Deep Learning Lab](https://github.com/kidusw/machine_deep_learning_repo) | Supervised learning from regression to PyTorch deep learning | scikit-learn, PyTorch |
-| [Experiment Tracking with MLflow](https://github.com/kidusw/experiment_tracking_with_mlflow) | Reproducible tracking of ML runs, metrics and artifacts | MLflow, Python |
 | [Freelancing Marketplace](https://github.com/kidusw/freelance_senior_project) | Multi-user marketplace with auth, RBAC and search | Node.js, React, MongoDB |
 | [Real-time Chat Server](https://github.com/kidusw/chat_app_v1) | Event-driven messaging with Redis pub/sub | Socket.io, Node.js, Redis |
 
