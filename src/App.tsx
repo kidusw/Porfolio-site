@@ -51,20 +51,28 @@ const PIPELINE = ["PDF upload", "chunk", "embed", "ChromaDB", "retrieve", "LLM",
 
 const PROJECTS = [
   {
+    title: "Transaction Categorization & Insights",
+    kind: "ML",
+    description:
+      "An end-to-end system that categorizes raw bank-statement lines in English and mixed Amharic/English, then surfaces recurring payments, monthly spend and anomalies. TF-IDF + logistic regression reaches 0.991 macro-F1, with a human review queue for low-confidence predictions.",
+    stack: ["scikit-learn", "LightGBM", "MLflow", "FastAPI", "PostgreSQL", "Streamlit"],
+    link: "https://github.com/kidusw/transaction-categorization",
+  },
+  {
+    title: "Credit Risk & Loan Default",
+    kind: "ML",
+    description:
+      "Probability-of-default models on 2.2M Lending Club loans: a WoE scorecard and a monotonic LightGBM champion, calibrated into expected loss and an approval policy, with SHAP reason codes, a fairness audit and a synthetic mobile-money thin-file track.",
+    stack: ["LightGBM", "SHAP", "MLflow", "FastAPI", "PostgreSQL", "Docker"],
+    link: "https://github.com/kidusw/credit-risk",
+  },
+  {
     title: "Machine & Deep Learning Lab",
     kind: "ML",
     description:
       "A full supervised-learning path, from regression, logistic models, KNN, SVMs and tree ensembles (random forests, AdaBoost) to deep learning in PyTorch, with GridSearchCV tuning throughout.",
     stack: ["scikit-learn", "PyTorch", "Pandas", "Matplotlib"],
     link: "https://github.com/kidusw/machine_deep_learning_repo",
-  },
-  {
-    title: "Experiment Tracking with MLflow",
-    kind: "MLOps",
-    description:
-      "Logs parameters, metrics and model artifacts across several ML projects and an ANN deep-learning project, so runs stay reproducible and comparable.",
-    stack: ["MLflow", "Python", "uv"],
-    link: "https://github.com/kidusw/experiment_tracking_with_mlflow",
   },
   {
     title: "Freelancing Marketplace",
